@@ -1,27 +1,30 @@
 // Importando a fonte
 @font-face {
     font-family: 'Amazon Ember';
-    src: url('./fonts/AmazonEmber-Regular.ttf') format('truetype');
+    src: url('./fonts/AmazonEmber_Rg.ttf') format('truetype');
 }
 
 // Variáveis
 $primary-color: #0F171E;
-$secondary-color: #aaa;
-$text-color: #fff;
+$secondary-color: rgb(116, 116, 117);
+$text-color: rgb(255, 255, 255);
 $button-color: #333;
 $font-family: 'Amazon Ember', sans-serif;
 
 // Reset
-* {
-    margin: 0;
+*  {
     padding: 0;
+    margin: 0;
+    text-decoration: none;
     box-sizing: border-box;
-}
+    color: white;
+    font-family: "Amazon Ember", sans-serif;
+    }
 
 // Estilos Gerais
 body {
     font-family: $font-family;
-    background-color: #000;
+    // background-color: #000;
     color: $text-color;
 }
 
@@ -30,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: $primary-color;
 
     .logo img {
@@ -39,6 +42,7 @@ header {
 
     nav ul {
         display: flex;
+        align-items: center;
         list-style: none;
 
         li {
@@ -53,6 +57,11 @@ header {
                     color: $secondary-color;
                 }
             }
+
+            img {
+                height: 40px;
+                border-radius: 50%;
+            }
         }
     }
 }
@@ -60,8 +69,8 @@ header {
 // Hero Section
 .hero {
     position: relative;
-    padding: 40px;
-    background: url('./img/killbill.png') no-repeat center center;
+    padding: 100px 40px;
+    background: url('../img/killbill.png') no-repeat center center;
     background-size: cover;
     color: $text-color;
 
@@ -73,6 +82,7 @@ header {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
     }
 
     .hero-content {
@@ -81,9 +91,15 @@ header {
         max-width: 600px;
 
         h3 {
+            box-sizing: border-box;
             font-size: 16px;
-            font-weight: normal;
-            color: $secondary-color;
+            font-weight: 700;
+            color: $text-color;
+            font-family: "Amazon Ember", "Amazon Arabic Ember", Arial, sans-serif;
+            letter-spacing: normal;
+            line-height: 19px;
+            margin-bottom: 0px;
+            text-size-adjust: 100%;
         }
 
         h1 {
@@ -92,17 +108,26 @@ header {
         }
 
         p {
-            font-size: 14px;
+            box-sizing: border-box;
+            color: $text-color;
+            cursor: default;
+            font-size: 18px;
+            font-weight: 700;
             margin: 10px 0;
         }
 
         .details {
-            font-size: 12px;
+            font-size: 16px;
+            font-weight: 700;
             color: $secondary-color;
         }
 
         .tags {
-            font-size: 14px;
+            box-sizing: border-box;
+            color: $text-color;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
             margin-top: 10px;
         }
     }
@@ -123,3 +148,25 @@ header {
         }
     }
 }
+
+ // Estilo da mensagem de indisponibilidade
+ .unavailable-message {
+    box-sizing: border-box;
+    color: $text-color;
+    display: block;
+    font-family: 'Amazon Ember', 'Amazon Arabic Ember', Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    height: 75px;
+    letter-spacing: 0.36px;
+    line-height: 25px;
+    margin-bottom: 0;
+    text-size-adjust: 100%;
+    width: 215.582px;
+    -webkit-font-smoothing: antialiased;
+    background: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semi-transparente para melhor legibilidade */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
